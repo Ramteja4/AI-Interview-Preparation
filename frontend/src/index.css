@@ -1,0 +1,506 @@
+/* =========================================================
+   GLOBAL VARIABLES
+   ========================================================= */
+
+:root {
+  --text: #5f6368;
+  --text-dark: #171717;
+  --background: #ffffff;
+  --surface: #f8f9fb;
+  --border: #e5e7eb;
+
+  --primary: #7c3aed;
+  --primary-hover: #6d28d9;
+  --primary-light: #f3e8ff;
+
+  --success: #16a34a;
+  --danger: #dc2626;
+
+  --shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --font:
+    system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   HEADINGS & TEXT
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text-dark);
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+code {
+  font-family: Consolas, monospace;
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: #f3f4f6;
+  color: var(--text-dark);
+}
+
+
+/* =========================================================
+   INTERVIEW CONTAINER
+   ========================================================= */
+
+.interview-container {
+  width: min(900px, 92%);
+  margin: 50px auto;
+  padding: 40px;
+
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.interview-loading {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.interview-error {
+  width: min(600px, 90%);
+  margin: 100px auto;
+  padding: 30px;
+
+  text-align: center;
+
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+}
+
+.interview-error h1 {
+  color: var(--danger);
+  margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   ROLE
+   ========================================================= */
+
+.report-role {
+  margin-top: 8px;
+  color: var(--text);
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.progress-text {
+  margin: 30px 0 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+
+  overflow: hidden;
+
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+.progress-fill {
+  height: 100%;
+
+  background: var(--primary);
+  border-radius: inherit;
+
+  transition: width 0.3s ease;
+}
+
+
+/* =========================================================
+   QUESTION
+   ========================================================= */
+
+.question-section {
+  margin-top: 30px;
+}
+
+.question-section h2 {
+  margin-bottom: 14px;
+}
+
+.question-box {
+  padding: 24px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: var(--text-dark);
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   VOICE BUTTON
+   ========================================================= */
+
+.voice-answer-button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--primary);
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.voice-answer-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.voice-answer-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.voice-answer-button.recording {
+  background: var(--danger);
+}
+
+
+/* =========================================================
+   RECORDING HELP
+   ========================================================= */
+
+.voice-help-text {
+  margin-top: 12px;
+
+  font-size: 14px;
+  text-align: center;
+
+  color: var(--text);
+}
+
+
+/* =========================================================
+   SUBMISSION STATUS
+   ========================================================= */
+
+.recording-status {
+  margin-top: 20px;
+  padding: 12px 16px;
+
+  text-align: center;
+
+  background: var(--primary-light);
+  color: var(--primary);
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.error-message {
+  margin-top: 20px;
+  padding: 12px 16px;
+
+  color: var(--danger);
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.primary-button {
+  border: none;
+  border-radius: 9px;
+
+  padding: 12px 20px;
+
+  background: var(--primary);
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primary-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.finish-button {
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   FINAL REPORT
+   ========================================================= */
+
+.final-report {
+  text-align: center;
+}
+
+.final-report > p {
+  margin-top: 10px;
+}
+
+
+/* =========================================================
+   SCORE CARDS
+   ========================================================= */
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  margin: 30px 0;
+}
+
+.score-card {
+  padding: 20px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.score-card h3 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.score-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+
+/* =========================================================
+   ATTEMPTED ANSWERS
+   ========================================================= */
+
+.attempted-answers {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.results-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.question-result-card {
+  margin-bottom: 20px;
+  padding: 24px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.question-result-card h3 {
+  margin-bottom: 16px;
+}
+
+.question-result-card p {
+  margin-top: 8px;
+}
+
+.question-result-card ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.question-result-card li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.preserved-text {
+  padding: 12px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  white-space: pre-wrap;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .interview-container {
+    width: 94%;
+    margin: 25px auto;
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  .question-box {
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .score-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .interview-container {
+    width: 95%;
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .score-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .voice-answer-button,
+  .primary-button {
+    width: 100%;
+  }
+}

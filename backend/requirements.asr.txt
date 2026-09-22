@@ -1,0 +1,3 @@
+# Install this alongside the existing project requirements.
+# CTranslate2 is installed automatically as a Faster-Whisper dependency.
+faster-whisper==1.2.1

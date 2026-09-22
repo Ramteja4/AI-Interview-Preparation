@@ -1,0 +1,443 @@
+/* --------------------------------------------------
+   Global Interview Container
+-------------------------------------------------- */
+
+.interview-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* --------------------------------------------------
+   Loading Screen
+-------------------------------------------------- */
+
+.interview-loading {
+  max-width: 900px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* --------------------------------------------------
+   Error Screen
+-------------------------------------------------- */
+
+.interview-error {
+  max-width: 900px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* --------------------------------------------------
+   Buttons
+-------------------------------------------------- */
+
+.primary-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.primary-button:disabled {
+  cursor: not-allowed;
+}
+
+.finish-button {
+  margin-top: 24px;
+}
+
+.voice-answer-button {
+  width: 100%;
+  padding: 18px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #1f2937;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.voice-answer-button.recording {
+  background: #dc2626;
+  animation: recordingPulse 1.2s infinite;
+}
+
+.restart-button {
+  margin-top: 25px;
+}
+
+/* --------------------------------------------------
+   Progress
+-------------------------------------------------- */
+
+.progress-text {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #333;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+/* --------------------------------------------------
+   Question
+-------------------------------------------------- */
+
+.question-section {
+  margin-bottom: 25px;
+}
+
+.question-box {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+/* --------------------------------------------------
+   Answer
+-------------------------------------------------- */
+
+.answer-section {
+  margin-bottom: 20px;
+}
+
+.answer-textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+/* --------------------------------------------------
+   Error Message
+-------------------------------------------------- */
+
+.error-message {
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border-radius: 8px;
+}
+
+/* --------------------------------------------------
+   Evaluation
+-------------------------------------------------- */
+
+.evaluation-section {
+  margin-top: 30px;
+}
+
+/* --------------------------------------------------
+   Score Grid
+-------------------------------------------------- */
+
+.score-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+/* --------------------------------------------------
+   Score Card
+-------------------------------------------------- */
+
+.score-card {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.score-value {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* --------------------------------------------------
+   Result Box
+-------------------------------------------------- */
+
+.result-box {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.result-box-content {
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------
+   Rendered AI Values
+-------------------------------------------------- */
+
+.render-list-item {
+  margin-bottom: 8px;
+}
+
+.render-object-item {
+  margin-bottom: 8px;
+}
+
+/* --------------------------------------------------
+   Next Question
+-------------------------------------------------- */
+
+.next-button {
+  margin-top: 25px;
+}
+
+/* --------------------------------------------------
+   Final Report
+-------------------------------------------------- */
+
+.final-report {
+  margin-top: 40px;
+}
+
+.overall-score-card {
+  padding: 30px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.overall-score {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.results-heading {
+  margin-top: 30px;
+}
+
+/* --------------------------------------------------
+   Question Results
+-------------------------------------------------- */
+
+.question-result-card {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+/* --------------------------------------------------
+   Answer Box in Final Report
+-------------------------------------------------- */
+
+.answer-box {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.preserved-text {
+  white-space: pre-wrap;
+}
+
+.final-report-section {
+  margin: 25px 0;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.final-report-section h2 {
+  margin-top: 0;
+}
+
+.final-report-content {
+  margin-top: 15px;
+  line-height: 1.7;
+}
+
+.final-report-content ul {
+  padding-left: 25px;
+}
+
+.final-report-content li {
+  margin-bottom: 8px;
+}
+
+.score-row {
+  display: flex;
+  gap: 20px;
+  margin: 25px 0;
+  justify-content: center;
+}
+
+.score-card {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.score-card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.score-value {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .score-row {
+    flex-direction: column;
+  }
+}
+
+
+/* ================================
+   Continuous Speech-to-Text
+   ================================ */
+
+.answer-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.answer-input-container textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 16px 60px 16px 16px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Microphone button */
+.mic-button {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f1f5f9;
+  color: #334155;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+.mic-button:hover {
+  transform: scale(1.05);
+  background: #e2e8f0;
+}
+
+/* Recording state */
+.mic-button.recording {
+  background: #ef4444;
+  color: white;
+  animation: recordingPulse 1.2s infinite;
+}
+
+.mic-button.recording:hover {
+  background: #dc2626;
+}
+
+/* Pulse animation while recording */
+@keyframes recordingPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+/* Recording / transcription status */
+.recording-status {
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Red recording text */
+.recording-status.recording {
+  color: #ef4444;
+}
+
+/* Transcribing text */
+.recording-status.transcribing {
+  color: #64748b;
+}
+
+/* Small animated indicator */
+.recording-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #ef4444;
+
+  animation: statusPulse 1s infinite;
+}
+
+@keyframes statusPulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
