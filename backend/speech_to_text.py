@@ -7,7 +7,8 @@ from pathlib import Path
 import ctranslate2
 from faster_whisper import WhisperModel
 
-
+os.environ["HF_HOME"] = "/tmp/huggingface"
+os.environ["HF_HUB_CACHE"] = "/tmp/huggingface/hub"
 
 print("========== WHISPER DEBUG ==========")
 print("CTranslate2 version:", ctranslate2.__version__)
