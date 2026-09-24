@@ -19,11 +19,11 @@ print("===================================")
 
 # MODEL_PATH = r"D:\PROGETTI\SMI\backend\models\faster-whisper-large-v3-turbo"
 
-MODEL_NAME = "mobiuslabsgmbh/faster-whisper-large-v3-turbo"
+# MODEL_NAME = "mobiuslabsgmbh/faster-whisper-large-v3-turbo"
 
-# BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent
 
-# MODEL_PATH = BASE_DIR / "models" / "faster-whisper-large-v3-turbo"
+MODEL_PATH = BASE_DIR / "models" / "faster-whisper-large-v3-turbo"
 
 
 DEVICE = os.getenv(
@@ -46,21 +46,21 @@ INTERVIEW_GLOSSARY = (
 
 
 print(
-    f"Loading Whisper model '{MODEL_NAME}' "
+    f"Loading Whisper model '{MODEL_PATH}' "
     f"on {DEVICE} ({COMPUTE_TYPE})..."
 )
 
-model = WhisperModel(
-    MODEL_NAME,
-    device=DEVICE,
-    compute_type=COMPUTE_TYPE
-)
-
 # model = WhisperModel(
-#     str(MODEL_PATH),
+#     MODEL_NAME,
 #     device=DEVICE,
 #     compute_type=COMPUTE_TYPE
 # )
+
+model = WhisperModel(
+    str(MODEL_PATH),
+    device=DEVICE,
+    compute_type=COMPUTE_TYPE
+)
 
 
 print("Whisper model loaded successfully!")
