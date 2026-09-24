@@ -8,6 +8,11 @@ import ctranslate2
 from faster_whisper import WhisperModel
 
 
+
+print("========== WHISPER DEBUG ==========")
+print("CTranslate2 version:", ctranslate2.__version__)
+print("CTranslate2 path:", ctranslate2.__file__)
+print("===================================")
 # -----------------------------
 # MODEL CONFIG
 # -----------------------------
