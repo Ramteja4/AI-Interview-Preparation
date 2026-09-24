@@ -12,7 +12,13 @@ from faster_whisper import WhisperModel
 # MODEL CONFIG
 # -----------------------------
 
-MODEL_PATH = r"D:\PROGETTI\SMI\backend\models\faster-whisper-large-v3-turbo"
+# MODEL_PATH = r"D:\PROGETTI\SMI\backend\models\faster-whisper-large-v3-turbo"
+
+
+BASE_DIR = Path(__file__).resolve().parent
+
+MODEL_PATH = BASE_DIR / "models" / "faster-whisper-large-v3-turbo"
+
 
 DEVICE = os.getenv(
     "WHISPER_DEVICE",
@@ -38,11 +44,18 @@ print(
     f"on {DEVICE} ({COMPUTE_TYPE})..."
 )
 
+# model = WhisperModel(
+#     MODEL_PATH,
+#     device=DEVICE,
+#     compute_type=COMPUTE_TYPE
+# )
+
 model = WhisperModel(
-    MODEL_PATH,
+    str(MODEL_PATH),
     device=DEVICE,
     compute_type=COMPUTE_TYPE
 )
+
 
 print("Whisper model loaded successfully!")
 
